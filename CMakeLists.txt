@@ -16,7 +16,8 @@ include(Dependency.cmake)
 target_include_directories(${PROJECT_NAME} PUBLIC ${DEP_INCLUDE_DIR})
 target_link_directories(${PROJECT_NAME} PUBLIC ${DEP_LIB_DIR})
 target_link_libraries(${PROJECT_NAME} PUBLIC ${DEP_LIBS} 
-"-framework CoreFoundation" "-framework CoreGraphics" "-framework CoreVideo" "-framework IOKit" "-framework APPKit")
+"-framework CoreFoundation" "-framework CoreGraphics" "-framework CoreVideo" "-framework IOKit" "-framework APPKit"
+"-framework AudioUnit" "-framework Accelerate")
 
 	
 target_compile_definitions(${PROJECT_NAME} PUBLIC
